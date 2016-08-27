@@ -9,7 +9,8 @@
   :source-paths ["src/clojure" "src"]
   :java-source-paths ["src/java"]
   :javac-options ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
-  :plugins [[lein-droid "0.4.4"]]
+  :plugins [[lein-droid "0.4.4"]
+            [cider/cider-nrepl "0.8.2"]]
 
   :dependencies [[org.clojure-android/clojure "1.7.0-r4"]
                  [neko/neko "4.0.0-alpha5"]]
@@ -49,7 +50,7 @@
                          :proguard-conf-path "build/proguard-minify.cfg"}}]}
 
   :android {;; Specify the path to the Android SDK directory.
-            ;; :sdk-path "/home/user/path/to/android-sdk/"
+            :sdk-path "../sdk/android-sdk-linux"
 
             ;; Increase this value if dexer fails with OutOfMemoryException.
             :dex-opts ["-JXmx4096M" "--incremental"]
